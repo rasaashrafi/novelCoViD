@@ -1,0 +1,99 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# novelCoViD
+
+<!-- badges: start -->
+[![CRAN status](https://www.r-pkg.org/badges/version/novelCoViD)](https://CRAN.R-project.org/package=novelCoViD)
+[![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+<!-- badges: end -->
+
+## Introduction 
+The "novelCoViD" R package allows users to obtain live worldwide data from the
+novel CoronaVirus Disease, CoViD-19, as published by the
+Johns Hopkins University data repository on Github, as well as, provide basic map and plot functions to investigate these datasets.
+
+The goal of this package is to make the latest data promptly available for anyone how wants to
+know more about number of death and confirmed cases of covid19 in any country in the world and 
+obtain some visualized sight from this data.
+
+### Data Accessibility
+The `Covid19Data()` function allows users to obtain realtime data about the CoViD19 reported cases from the Johns Hopkins University data repository. this function provide a clean data of total and daily death and confirmed cases for every country, available scince 2020-01-22.
+
+### visualizing data on the World map 
+The `Covid19onMap()` function provide a world map that the color of every country shows number of new cases of confirmed or death from covid19 on the given date. Entries of this function are data set provided by Covid19Data() function (or the defult is local_data which is the old version of covid19 data, that is stored in the package), a specific date and the type of "confirmed" or "death" to show on the map.
+
+### plot new cases as a function of time for the given country
+The 'Covid19Plot()' function plot number of new cases of confirmed and death from covid19 as a function of time for the given country or countries. Entries of this function are data set provided by Covid19Data() function (or the defult is local_data which is the old version of covid19 data, that is stored in the package), a user defined countries, the start date and the end date of user defined time interval.
+
+
+## Installation
+
+You can install the released version of novelCoViD from [CRAN](https://CRAN.R-project.org) with:
+
+``` r
+install.packages("novelCoViD")
+```
+
+And the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("??????????")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(novelCoViD)
+## get new data
+newdata <- Covid19Data()
+```
+
+```{r message=FALSE, warning=FALSE}
+# map the data for new cases for a given date
+Covid19onMap(newdata, "2020-05-24", "confirmed")
+```
+
+```{r}
+# plot the data as a function of time for any country
+Covid19Plot(newdata,"Iran",start_date="2020-01-22",end_date = "2020-10-24")
+```
+
+
+```{r}
+# plot the data as a function of time for some countries
+Covid19Plot(newdata,country=c("Iran","india"),start_date="2020/02/22",end_date = "2020/05/15")
+```
+
+
+
+What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
+
+```{r cars}
+summary(cars)
+```
+
+You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
+
+You can also embed plots, for example:
+
+```{r pressure, echo = FALSE}
+plot(pressure)
+```
+
+In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
