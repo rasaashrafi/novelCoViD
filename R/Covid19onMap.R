@@ -2,9 +2,9 @@
 #'
 #' @description function to show number of daily confirmed cases or death from covid19, on the world map on a given date
 #'
-#' @param data a dataframe that contains covid19 data which can be reached by function Covid19Data(). Default is local_data which is the offline available version of covid19 data stored in the package. Someone can use this default if he/she can't reach the net
-#' @param date a string that indicates a date, possible formats are: "yyyy-m-d" or "yyyy/m/d"
-#' @param type a string that indicates type of reported cases, possible values are: "confirmed" and "death"
+#' @param data a dataframe that contains covid19 data which can be reached by function Covid19Data(). Default is local_data which is the offline available version of covid19 data stored in the package. Someone can use this default if he/she can't reach the net.
+#' @param date a string that indicates a date, possible formats are: "yyyy-m-d" or "yyyy/m/d".
+#' @param type a string that indicates type of reported cases, possible values are: "confirmed" and "death".
 #'
 #' @return a world map that the color of every country shows number of new confirmed cases or new death from covid19 on the given date
 #'

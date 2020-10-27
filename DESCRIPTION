@@ -4,7 +4,7 @@ Title: CoViD-19 data visualization
 Version: 0.1.0
 Author: c(person("Rasa", "Ashrafi", email = "rasa.ashrafi@gmail.com", role = c("cre","aut")))
 Maintainer: The package maintainer <rasa.ashrafi@gmail.com>
-Description: This package allows users to obtain live worldwide data from the novel CoronaVirus Disease (CoViD-19) published by the Johns Hopkins University. The package provides basic map and plot functions to explore the dataset.
+Description: This package allows users to obtain live worldwide data from the novel CoronaVirus Disease (CoViD-19), as published by the Johns Hopkins University. The package provides basic map and plot functions to explore the dataset.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true

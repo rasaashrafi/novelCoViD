@@ -34,17 +34,11 @@ Note that the default data is a local data which is the offline available versio
 
 ## Installation
 
-You can install the released version of novelCoViD from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("novelCoViD")
-```
-
-obtain the development version from [GitHub](https://github.com/) with:
+You can install the development version of novelCoViD from [GitHub](https://github.com/) with:
 
 ``` r
 # need devtools for installing from the github repo
- install.packages("devtools")
+install.packages("devtools")
 
 # install novelCoViD from github
 devtools::install_github('https://github.com/rasaashrafi/novelCoViD.git')

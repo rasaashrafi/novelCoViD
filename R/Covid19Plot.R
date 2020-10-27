@@ -2,10 +2,10 @@
 #'
 #' @description function to plot number of daily confirmed cases and death from covid19 as a function of time for a given country in a given time interval
 #'
-#' @param data a dataframe that contains covid19 data which can be reached by function Covid19Data(). Default is local_data which is the offline available version of covid19 data stored in the package. Someone can use this default if he/she can't reach the net
-#' @param country a string that indicates name of a country or a vector of strings that indicates name of some countries. available names are stored in the variable named 'country_names'
-#' @param start_date a string that indicates the beginning of the interval, possible formats are: "yyyy-m-d" or "yyyy/m/d"
-#' @param end_date a string that indicates the end of the interval, possible formats are: "yyyy-m-d" or "yyyy/m/d"
+#' @param data a dataframe that contains covid19 data which can be reached by function Covid19Data(). Default is local_data which is the offline available version of covid19 data stored in the package. Someone can use this default if he/she can't reach the net.
+#' @param country a string that indicates name of a country or a vector of strings that indicates name of some countries. available names are stored in the variable named 'country_names'.
+#' @param start_date a string that indicates the beginning of the interval, possible formats are: "yyyy-m-d" or "yyyy/m/d".
+#' @param end_date a string that indicates the end of the interval, possible formats are: "yyyy-m-d" or "yyyy/m/d".
 #'
 #'
 #' @return a plot of number of daily confirmed cases and death from covid19 as a function of time for the given country in the given time interval

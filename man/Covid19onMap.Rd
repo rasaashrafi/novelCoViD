@@ -7,11 +7,11 @@
 Covid19onMap(data = local_data, date, type)
 }
 \arguments{
-\item{data}{a dataframe that contains covid19 data which can be reached by function Covid19Data(). Default is local_data which is the offline available version of covid19 data stored in the package. Someone can use this default if he/she can't reach the net}
+\item{data}{a dataframe that contains covid19 data which can be reached by function Covid19Data(). Default is local_data which is the offline available version of covid19 data stored in the package. Someone can use this default if he/she can't reach the net.}
 
-\item{date}{a string that indicates a date, possible formats are: "yyyy-m-d" or "yyyy/m/d"}
+\item{date}{a string that indicates a date, possible formats are: "yyyy-m-d" or "yyyy/m/d".}
 
-\item{type}{a string that indicates type of reported cases, possible values are: "confirmed" and "death"}
+\item{type}{a string that indicates type of reported cases, possible values are: "confirmed" and "death".}
 }
 \value{
 a world map that the color of every country shows number of new confirmed cases or new death from covid19 on the given date
