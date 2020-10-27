@@ -2,7 +2,7 @@
 #'
 #' @description function to read "live" covid19 data from Johns Hopkins University data repository
 #'
-#' @return a dataframe with the daily worlwide data of covid19 per country with total and new cases of confirmed and death
+#' @return a dataframe with the daily worlwide data of covid19 per country, with total and new confirmed cases and  death
 #'
 #' @export
 #'
