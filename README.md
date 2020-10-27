@@ -57,22 +57,22 @@ This is a basic example which shows you how to solve a common problem:
 ``` r
 library(novelCoViD)
 ## basic example code
-newdata <- Covid19Data()
+newdata <- novelCoViD::Covid19Data()
 ```
 
 ``` r
 # map the data of daily cases for a given date
-Covid19onMap(newdata, "2020-06-24", "confirmed")
+novelCoViD::Covid19onMap(newdata, "2020-06-24", "confirmed")
 ```
 
 
 ``` r
 # plot the data as a function of time for any country
-Covid19Plot(newdata,"Iran",start_date="2020-01-22",end_date = "2020-10-24")
+novelCoViD::Covid19Plot(newdata,"Iran",start_date="2020-01-22",end_date = "2020-10-24")
 ```
 
 ``` r
 # plot the data as a function of time for a number of countries
-Covid19Plot(newdata,country=c("Iran","india"),start_date="2020/02/22",end_date = "2020/05/15")
+novelCoViD::Covid19Plot(newdata,country=c("Iran","india"),start_date="2020/02/22",end_date = "2020/05/15")
 ```
 
