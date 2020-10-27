@@ -32,16 +32,7 @@ Covid19onMap <- function(data = local_data, date, type){
   world <- ggplot2::map_data("world")
   world <- dplyr::rename(world, Country=region)
   data <- dplyr::inner_join(data, world, by='Country')
-  #return(data)
 
-  # ggplot(data = death3) +
-  #   geom_polygon(aes(x = long, y = lat, group = group, fill = New_Cases/population2)) +
-  #   coord_fixed(1.3)+
-  #   scale_fill_viridis_c(option = "C")+
-  #   theme(axis.line=element_blank(),axis.text.x=element_blank(),
-  #         axis.text.y=element_blank(),axis.ticks=element_blank(),
-  #         axis.title.x=element_blank(),
-  #         axis.title.y=element_blank())
 
   # show new cases on the world map
   world_plot <- ggplot2::ggplot(data = data) +
