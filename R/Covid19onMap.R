@@ -10,19 +10,6 @@
 #'
 #' @export
 #'
-#' @importFrom dplyr filter
-#' @importFrom dplyr select
-#' @importFrom dplyr inner_join
-#' @importFrom dplyr rename
-#'
-#' @importFrom ggplot2 map_data
-#' @importFrom ggplot2 ggplot
-#' @importFrom ggplot2 geom_polygon
-#' @importFrom ggplot2 aes
-#' @importFrom ggplot2 coord_fixed
-#' @importFrom ggplot2 scale_fill_viridis_c
-#' @importFrom ggplot2 theme
-#' @importFrom ggplot2 element_blank
 #'
 #' @examples
 #' \dontrun{

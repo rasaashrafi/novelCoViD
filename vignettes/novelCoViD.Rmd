@@ -1,0 +1,19 @@
+---
+title: "CoViD-19 data visualization"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{CoViD-19 data visualization}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(novelCoViD)
+```

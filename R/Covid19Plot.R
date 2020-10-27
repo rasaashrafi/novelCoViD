@@ -5,26 +5,13 @@
 #' @param data a dataframe that contains covid19 data which can be reached by function Covid19Data(). defult is local_data which is the old version of covid19 data, that is stored in the package. some one can use this defult if he/she can't reach the net
 #' @param start_date a string that indicate the beginning of the interval of date, possible formats are: "y-m-d" or "y/m/d"
 #' @param end_date a string that indicate the end of the interval of date, possible formats are: "y-m-d" or "y/m/d"
-#' @param country a string that indicate name of a country or a vector of strings that indicate name of some countries, possible values are:
-#' ??????????????????????
+#' @param country a string that indicate name of a country or a vector of strings that indicate name of some countries, available names are stored in the variable named 'country_names'
+#'
 #'
 #' @return a plot of number of new cases of confirmed and death from covid19 as a function of time for the given country in the given time interval
 #'
 #' @export
 #'
-#' @importFrom dplyr select
-#' @importFrom dplyr filter
-#'
-#' @importFrom tidyr gather
-#'
-#' @importFrom ggplot2 ggplot
-#' @importFrom ggplot2 aes
-#' @importFrom ggplot2 theme
-#' @importFrom ggplot2 geom_line
-#' @importFrom ggplot2 ggtitle
-#' @importFrom ggplot2 theme_bw
-#' @importFrom ggplot2 element_text
-#' @importFrom ggplot2 facet_grid
 #'
 #' @examples
 #' \dontrun{

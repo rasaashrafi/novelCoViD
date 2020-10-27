@@ -14,8 +14,7 @@ Covid19Plot(
 \arguments{
 \item{data}{a dataframe that contains covid19 data which can be reached by function Covid19Data(). defult is local_data which is the old version of covid19 data, that is stored in the package. some one can use this defult if he/she can't reach the net}
 
-\item{country}{a string that indicate name of a country or a vector of strings that indicate name of some countries, possible values are:
-??????????????????????}
+\item{country}{a string that indicate name of a country or a vector of strings that indicate name of some countries, available names are stored in the variable named 'country_names'}
 
 \item{start_date}{a string that indicate the beginning of the interval of date, possible formats are: "y-m-d" or "y/m/d"}
 

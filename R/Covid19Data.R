@@ -6,16 +6,6 @@
 #'
 #' @export
 #'
-#' @importFrom tidyr gather
-#'
-#' @importFrom dplyr select
-#' @importFrom dplyr mutate
-#' @importFrom dplyr rename
-#' @importFrom dplyr summarise
-#' @importFrom dplyr group_by
-#' @importFrom dplyr ungroup
-#' @importFrom dplyr arrange
-#' @importFrom dplyr lag
 #'
 #' @examples
 #' \dontrun{
@@ -41,12 +31,6 @@ Covid19Data <- function(){
                                                                        ifelse(df$Country.Region=="North Macedonia","Macedonia",df$Country.Region)))))))))
 
 
-    # country <- ifelse(df$Country.Region=="Taiwan*","Taiwan",df$Country.Region)
-    # mutate(region=ifelse(region=='US','USA',region)) %>%
-    #   mutate(region=ifelse(region=='United Kingdom','UK',region)) %>%
-    #   mutate(region=ifelse(region=='Congo (Kinshasa)','Democratic Republic of the Congo',region)) %>%
-    #   mutate(region=ifelse(region=='Taiwan*','Taiwan',region)) %>%
-    #   mutate(region=ifelse(region=='Congo (Brazzaville)','Republic of Congo',region))
     df <- dplyr::mutate(df,Country.Region=country)
     df <- dplyr::rename(df,Country=Country.Region)
 
