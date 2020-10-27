@@ -18,6 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/novelCoViD)](https://CRAN.R-project.org/package=novelCoViD)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Travis build status](https://travis-ci.com/rasaashrafi/novelCoViD.svg?branch=master)](https://travis-ci.com/rasaashrafi/novelCoViD)
 <!-- badges: end -->
 
 ## Introduction 
