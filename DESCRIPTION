@@ -15,11 +15,12 @@ Depends:
 Imports: 
     tidyr,
     dplyr,
-    ggplot2
+    ggplot2,
+    maps
 Suggests: 
     knitr,
     rmarkdown,
     testthat
 VignetteBuilder: knitr
 URL: https://github.com/rasaashrafi/novelCoViD
-BugReports:https://github.com/rasaashrafi/novelCoViD/issues 
+BugReports: https://github.com/rasaashrafi/novelCoViD/issues 

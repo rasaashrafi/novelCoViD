@@ -39,7 +39,7 @@ The `Covid19onMap()` function provides a world map in which the color of every c
 Note that the default data is a local data which is the offline available version of covid19 data stored in the package. It is recommended that the user gets the updated data using Covid19Data() function.
 
 ### plot new cases as a function of time for the given country
-The 'Covid19Plot()' function plots number of new confirmed cases and new death from covid19 as a function of time for the given country or countries. Entries of this function are: 
+The `Covid19Plot()` function plots number of new confirmed cases and new death from covid19 as a function of time for the given country or countries. Entries of this function are: 
 1) data set which should be provided by Covid19Data() function, 
 2) country or countries names, available names are stored in the variable named 'country_names'
 3) start date 
@@ -60,7 +60,7 @@ And the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # need devtools for installing from the github repo
-# install.packages("devtools")
+ install.packages("devtools")
 
 # install novelCoViD from github
 devtools::install_github('https://github.com/rasaashrafi/novelCoViD.git')
@@ -77,7 +77,7 @@ newdata <- Covid19Data()
 ```
 
 ```{r message=FALSE, warning=FALSE}
-# map the data for new cases for a given date
+# map the data of daily cases for a given date
 Covid19onMap(newdata, "2020-06-24", "confirmed")
 ```
 
@@ -88,7 +88,7 @@ Covid19Plot(newdata,"Iran",start_date="2020-01-22",end_date = "2020-10-24")
 
 
 ```{r}
-# plot the data as a function of time for some countries
+# plot the data as a function of time for a number of countries
 Covid19Plot(newdata,country=c("Iran","india"),start_date="2020/02/22",end_date = "2020/05/15")
 ```
 
