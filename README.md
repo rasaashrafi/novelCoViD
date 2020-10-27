@@ -8,7 +8,7 @@
 
 ## Introduction 
 The "novelCoViD" R package allows users to obtain live worldwide data from the
-novel CoronaVirus Disease (CoViD-19) published by Johns Hopkins University. The package also provides basic map and plot functions to explore the dataset.
+novel CoronaVirus Disease (CoViD-19), as published by Johns Hopkins University. The package also provides basic map and plot functions to explore the dataset.
 
 The goal of this package is to make the latest data available for anyone who wants to
 know more about number of death and confirmed cases of covid19 in any country in the world, and 
@@ -17,18 +17,18 @@ obtain some visualized understanding from this data.
 ### Data Accessibility
 The `Covid19Data()` function allows users to obtain real time data of CoViD19 reported cases from Johns Hopkins University data repository. This function provides a clean data of total and daily death and confirmed cases for every country, available since 2020-01-22.
 
-### visualizing data on map 
-The `Covid19onMap()` function provides a world map in which the color of every country shows number of new cases of confirmed or death from covid19 on the given date. Entries of this function are: 
+### Visualizing data on map 
+The `Covid19onMap()` function provides a world map in which the color of every country shows number of new confirmed cases or death from covid19 on the given date. Entries of this function are: 
 1) a dataframe which should be provided by Covid19Data() function, 
 2) a specific date, possible formats are: "yyyy-m-d" or "yyyy/m/d"
 3) the type of "confirmed" or "death" to show on the map. 
 Note that the default data is a local data which is the offline available version of covid19 data stored in the package. It is recommended that the user gets the updated data using Covid19Data() function.
 
-### plot new cases as a function of time for the given country
-The `Covid19Plot()` function plots number of new confirmed cases and new death from covid19 as a function of time for the given country or countries. Entries of this function are: 
+### Plot daily cases as a function of time for the given country
+The `Covid19Plot()` function plots number of daily confirmed cases and daily death from covid19 as a function of time for the given country or countries. Entries of this function are: 
 1) data set which should be provided by Covid19Data() function, 
-2) country or countries names, available names are stored in the variable named 'country_names'
-3) start date 
+2) country or countries names. available names are stored in the variable named 'country_names',
+3) start date, 
 4) end date.
 Note that the default data is a local data which is the offline available version of covid19 data stored in the package. It is recommended that the user gets the updated data using Covid19Data() function.
 
@@ -40,7 +40,7 @@ You can install the released version of novelCoViD from [CRAN](https://CRAN.R-pr
 install.packages("novelCoViD")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+obtain the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # need devtools for installing from the github repo
@@ -52,11 +52,11 @@ devtools::install_github('https://github.com/rasaashrafi/novelCoViD.git')
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+These are some examples of the three main functions of the package:
 
 ``` r
 library(novelCoViD)
-## basic example code
+# get new data
 newdata <- novelCoViD::Covid19Data()
 ```
 
