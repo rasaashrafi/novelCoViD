@@ -120,7 +120,7 @@
     <p>function to show number of daily confirmed cases or death from covid19, on the world map on a given date</p>
     </div>
 
-    <pre class="usage"><span class='fu'>Covid19onMap</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>local_data</span>, <span class='va'>date</span>, <span class='va'>type</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>Covid19onMap</span><span class='op'>(</span>data <span class='op'>=</span> <span class='va'>local_data</span>, <span class='va'>date</span>, <span class='va'>type</span>, log_scale <span class='op'>=</span> <span class='cn'>FALSE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -136,6 +136,10 @@
     <tr>
       <th>type</th>
       <td><p>a string that indicates type of reported cases, possible values are: "confirmed" and "death".</p></td>
+    </tr>
+    <tr>
+      <th>log_scale</th>
+      <td><p>Boolean. if it is TRUE, the number of confirmed cases or death on map will be displayed in logarithmic scale. Default is FALSE.</p></td>
     </tr>
     </table>
 

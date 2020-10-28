@@ -87,7 +87,7 @@
 <div id="visualizing-data-on-map" class="section level3">
 <h3 class="hasAnchor">
 <a href="#visualizing-data-on-map" class="anchor"></a>Visualizing data on map</h3>
-<p>The <code><a href="reference/Covid19onMap.html">Covid19onMap()</a></code> function provides a world map in which the color of every country shows number of new confirmed cases or death from covid19 on the given date. Entries of this function are: 1) a dataframe which should be provided by Covid19Data() function, 2) a specific date, possible formats are: “yyyy-m-d” or “yyyy/m/d” 3) the type of “confirmed” or “death” to show on the map. Note that the default data is a local data which is the offline available version of covid19 data stored in the package. It is recommended that the user gets the updated data using Covid19Data() function.</p>
+<p>The <code><a href="reference/Covid19onMap.html">Covid19onMap()</a></code> function provides a world map in which the color of every country shows number of new confirmed cases or death from covid19 on the given date. Entries of this function are: 1) a dataframe which should be provided by Covid19Data() function, 2) a specific date, possible formats are: “yyyy-m-d” or “yyyy/m/d” 3) the type of “confirmed” or “death” to show on the map. 4) Whether to show data in logarithmic scale or not. Default is FALSE. Note that the default data is a local data which is the offline available version of covid19 data stored in the package. It is recommended that the user gets the updated data using Covid19Data() function.</p>
 </div>
 <div id="plot-daily-cases-as-a-function-of-time-for-the-given-country" class="section level3">
 <h3 class="hasAnchor">
@@ -122,7 +122,7 @@
 <span class="fu">novelCoViD</span><span class="fu">::</span><span class="fu"><a href="reference/Covid19Plot.html">Covid19Plot</a></span><span class="op">(</span><span class="va">newdata</span>,<span class="st">"Iran"</span>,start_date<span class="op">=</span><span class="st">"2020-01-22"</span>,end_date <span class="op">=</span> <span class="st">"2020-10-24"</span><span class="op">)</span></pre></div>
 <div class="sourceCode" id="cb5"><pre class="downlit">
 <span class="co"># plot the data as a function of time for a number of countries</span>
-<span class="fu">novelCoViD</span><span class="fu">::</span><span class="fu"><a href="reference/Covid19Plot.html">Covid19Plot</a></span><span class="op">(</span><span class="va">newdata</span>,country<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Iran"</span>,<span class="st">"india"</span><span class="op">)</span>,start_date<span class="op">=</span><span class="st">"2020/02/22"</span>,end_date <span class="op">=</span> <span class="st">"2020/05/15"</span><span class="op">)</span></pre></div>
+<span class="fu">novelCoViD</span><span class="fu">::</span><span class="fu"><a href="reference/Covid19Plot.html">Covid19Plot</a></span><span class="op">(</span><span class="va">newdata</span>,country<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Iran"</span>,<span class="st">"India"</span><span class="op">)</span>,start_date<span class="op">=</span><span class="st">"2020/02/22"</span>,end_date <span class="op">=</span> <span class="st">"2020/05/15"</span><span class="op">)</span></pre></div>
 </div>
 </div>
   </div>
