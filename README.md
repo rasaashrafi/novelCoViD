@@ -22,6 +22,7 @@ The `Covid19onMap()` function provides a world map in which the color of every c
 1) a dataframe which should be provided by Covid19Data() function, 
 2) a specific date, possible formats are: "yyyy-m-d" or "yyyy/m/d"
 3) the type of "confirmed" or "death" to show on the map. 
+4) Whether to show data in logarithmic scale or not. Default is FALSE.
 Note that the default data is a local data which is the offline available version of covid19 data stored in the package. It is recommended that the user gets the updated data using Covid19Data() function.
 
 ### Plot daily cases as a function of time for the given country
