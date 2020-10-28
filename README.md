@@ -67,6 +67,6 @@ novelCoViD::Covid19Plot(newdata,"Iran",start_date="2020-01-22",end_date = "2020-
 
 ``` r
 # plot the data as a function of time for a number of countries
-novelCoViD::Covid19Plot(newdata,country=c("Iran","india"),start_date="2020/02/22",end_date = "2020/05/15")
+novelCoViD::Covid19Plot(newdata,country=c("Iran","India"),start_date="2020/02/22",end_date = "2020/05/15")
 ```
 

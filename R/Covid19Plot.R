@@ -18,7 +18,7 @@
 #' newdata <- Covid19Data()
 #' Covid19Plot(newdata,"Iran")
 #' Covid19Plot(newdata,"Iran",start_date="2020-01-22",end_date = Sys.Date())
-#' Covid19Plot(newdata,country=c("Iran","india"),start_date="2020/02/22",end_date = "2020/05/15")
+#' Covid19Plot(newdata,country=c("Iran","India"),start_date="2020/02/22",end_date = "2020/05/15")
 #' }
 Covid19Plot <- function(data = local_data,
                         country,
@@ -40,9 +40,8 @@ Covid19Plot <- function(data = local_data,
 
   plt <- ggplot2::ggplot(df2,ggplot2::aes(x=Date, y=New_Cases))+
     ggplot2::geom_line(ggplot2::aes(color=Type),size=1)+
-    #geom_point()+
-    #ggplot2::ggtitle(country_name)+
-    ggplot2::facet_grid(.~Country)+
+    ggplot2::facet_wrap(.~Country)+
+    #ggplot2::scale_color_manual(values = c("deeppink3","cyan3"))+
     ggplot2::theme_bw()+
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
   return(plt)

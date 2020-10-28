@@ -24,9 +24,11 @@ Covid19onMap <- function(data = local_data, date, type){
   if (type=="confirmed"){
     data <- dplyr::select(data,-c("Total_Death","New_Death","Total_Confirmed"))
     data <- dplyr::rename(data, New_Cases=New_Confirmed)
+    s <- "New confirmed cases on "
   } else if (type=="death"){
     data <- dplyr::select(data,-c("Total_Confirmed","New_Confirmed","Total_Death"))
     data <- dplyr::rename(data, New_Cases=New_Death)
+    s <- "New death on "
   }
 
   world <- ggplot2::map_data("world")
@@ -39,6 +41,7 @@ Covid19onMap <- function(data = local_data, date, type){
     ggplot2::geom_polygon(ggplot2::aes(x = long, y = lat, group = group, fill = New_Cases)) +
     ggplot2::coord_fixed(1.3)+
     ggplot2::scale_fill_viridis_c(option = "C")+
+    ggplot2::ggtitle(paste0(s,unique(data$Date)))+
     ggplot2::theme(axis.line=ggplot2::element_blank(),axis.text.x=ggplot2::element_blank(),
           axis.text.y=ggplot2::element_blank(),axis.ticks=ggplot2::element_blank(),
           axis.title.x=ggplot2::element_blank(),

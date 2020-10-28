@@ -31,6 +31,6 @@ function to plot number of daily confirmed cases and death from covid19 as a fun
 newdata <- Covid19Data()
 Covid19Plot(newdata,"Iran")
 Covid19Plot(newdata,"Iran",start_date="2020-01-22",end_date = Sys.Date())
-Covid19Plot(newdata,country=c("Iran","india"),start_date="2020/02/22",end_date = "2020/05/15")
+Covid19Plot(newdata,country=c("Iran","India"),start_date="2020/02/22",end_date = "2020/05/15")
 }
 }

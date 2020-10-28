@@ -10,7 +10,9 @@ Covid19Data()
 a dataframe with the daily worlwide data of covid19 per country, with total and new confirmed cases and  death
 }
 \description{
-function to read "live" covid19 data from Johns Hopkins University data repository
+function to read "live" covid19 data from Johns Hopkins University data repository.
+
+Note: This data is based on the information each country reported every day of it's total confirmed cases or death. Some countries on some dates reported number of it's cases less than the day before, so the new cases for them on that date will be reported negative in the data set.
 }
 \examples{
 \dontrun{
