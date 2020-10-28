@@ -27,22 +27,43 @@ Covid19Plot <- function(data = local_data,
                         ) {
   start_date <- as.Date(start_date)
   end_date <- as.Date(end_date)
-  mask <- (tolower(data$Country) %in% tolower(country)) &
-    (data$Date >= start_date & data$Date <= end_date)
-  df <- dplyr::filter(data, mask)
-  df <- dplyr::select(df,c("Date","Country","New_Confirmed","New_Death"))
-  #df <- data[mask,c("Date","Country","New_Confirmed","New_Death")]
 
-  df2 <- tidyr::gather(df,"Type","New_Cases",-c(Date,Country))
+  # check if date is in the available range or not
+  if (start_date > end_date){
+    check1 <- FALSE
+  }else {
+    check1 <- TRUE
+  }
 
-  # title of plot
-  country_name <- unique(data$Country[tolower(data$Country) %in% tolower(country)])
+  # check if the name of countries are ok
+  v <- tolower(country) %in% tolower(data$Country)
+  check2 <- sum(v)==length(country)
 
-  plt <- ggplot2::ggplot(df2,ggplot2::aes(x=Date, y=New_Cases))+
-    ggplot2::geom_line(ggplot2::aes(color=Type),size=1)+
-    ggplot2::facet_wrap(.~Country)+
-    #ggplot2::scale_color_manual(values = c("deeppink3","cyan3"))+
-    ggplot2::theme_bw()+
-    ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
+
+  if (check1 & check2){
+    mask <- (tolower(data$Country) %in% tolower(country)) &
+      (data$Date >= start_date & data$Date <= end_date)
+    df <- dplyr::filter(data, mask)
+    df <- dplyr::select(df,c("Date","Country","New_Confirmed","New_Death"))
+    #df <- data[mask,c("Date","Country","New_Confirmed","New_Death")]
+
+    df2 <- tidyr::gather(df,"Type","New_Cases",-c(Date,Country))
+
+    # title of plot
+    country_name <- unique(data$Country[tolower(data$Country) %in% tolower(country)])
+
+    plt <- ggplot2::ggplot(df2,ggplot2::aes(x=Date, y=New_Cases))+
+      ggplot2::geom_line(ggplot2::aes(color=Type),size=1)+
+      ggplot2::facet_wrap(.~Country)+
+      #ggplot2::scale_color_manual(values = c("deeppink3","cyan3"))+
+      ggplot2::theme_bw()+
+      ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 90, vjust = 0.5, hjust=1))
+  } else {
+    if (check1){
+      plt <- "There is a problem in the given name for countries. Check for available country names through \'country_names\'."
+    } else {
+      plt <- "The given start_date should be before the given end_date."
+    }
+  }
   return(plt)
 }
