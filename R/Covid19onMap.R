@@ -30,9 +30,16 @@ Covid19onMap <- function(data = local_data, date, type, log_scale =FALSE){
     check <- TRUE
   }
 
+  # check for the correct type
+  if (type %in% c("confirmed","death")){
+    check2 <- TRUE
+  } else {
+    check2 <- FALSE
+  }
+
   data <- dplyr::filter(data,Date==date)
 
-  if (check){
+  if (check & check2){
     if (log_scale == TRUE){
       col_c <- data$New_Confirmed+1
       col_c <- ifelse(col_c < 0, 0, col_c)
@@ -74,7 +81,12 @@ Covid19onMap <- function(data = local_data, date, type, log_scale =FALSE){
             axis.title.y=ggplot2::element_blank())
 
   } else {
-    world_plot <- paste0("Date is out of range. Data is available for dates between ", min_date, " and ", max_date)
+    if (check2){
+      world_plot <- paste0("Date is out of range. Data is available for dates between ", min_date, " and ", max_date)
+    } else {
+      world_plot <- "type should be \'confirmed\' or \'death\'. "
+    }
+
   }
 
   return(world_plot)
