@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# novelCoViD
+# novelCoViD <img src="man/figures/logo.jpg" align="right" height = 150 />
 
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/novelCoViD)](https://CRAN.R-project.org/package=novelCoViD)
@@ -66,7 +66,7 @@ devtools::install_github('https://github.com/rasaashrafi/novelCoViD.git')
 
 These are some examples of the three main functions of the package:
 
-```{r example}
+```{r example, message=FALSE, warning=FALSE}
 library(novelCoViD)
 # get new data
 newdata <- Covid19Data()
@@ -74,7 +74,7 @@ newdata <- Covid19Data()
 
 ```{r message=FALSE, warning=FALSE}
 # map the data of daily cases for a given date
-Covid19onMap(newdata, "2020-06-24", "confirmed")
+Covid19onMap(newdata, "2020-06-24", "confirmed",log_scale = TRUE)
 ```
 
 ```{r}
